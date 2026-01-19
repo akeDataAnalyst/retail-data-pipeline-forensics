@@ -1,7 +1,7 @@
 # End-to-End Dubai Retail Analytics Pipeline
 ### Data Engineering | Forensic Audit | Business Intelligence Dashboard
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge.svg)](YOUR_STREAMLIT_LINK_HERE)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge.svg)](https://retail-data-pipeline-forensics-na94ekakbwdrg5e4rrcqmq.streamlit.app/)
 
 ## Project Overview
 This project simulates a professional retail data ecosystem for the Dubai market. It covers the entire data lifecycle: from generating high-variance synthetic data to forensic cleaning, SQL-based performance analysis, and finally, a cloud-deployed stakeholder dashboard.
@@ -38,7 +38,7 @@ Migrated cleaned data to a relational MySQL database to run complex KPI queries.
 
 ### 4: Stakeholder Reporting (Streamlit)
 Deployed a live, interactive dashboard that allows non-technical stakeholders to filter performance by event and location.
-* **Live Dashboard:** [Link to your Streamlit App]
+* **Live Dashboard:** [https://retail-data-pipeline-forensics-na94ekakbwdrg5e4rrcqmq.streamlit.app/]
 
 ---
 
