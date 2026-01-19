@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -26,14 +20,14 @@ def load_data():
 
 df = load_data()
 
-# --- SIDEBAR FILTERS ---
+# SIDEBAR FILTERS
 st.sidebar.header("Filter Insights")
 selected_event = st.sidebar.multiselect("Select Dubai Event", options=df['Event'].unique(), default=df['Event'].unique())
 selected_location = st.sidebar.multiselect("Select Store Location", options=df['Store_Location'].unique(), default=df['Store_Location'].unique())
 
 filtered_df = df[(df['Event'].isin(selected_event)) & (df['Store_Location'].isin(selected_location))]
 
-# --- ROW 1: KEY METRICS ---
+# ROW 1: KEY METRICS
 col1, col2, col3 = st.columns(3)
 with col1:
     st.metric("Total Revenue (AED)", f"{int((filtered_df['Sales_Qty'] * filtered_df['Unit_Price_AED']).sum()):,}")
@@ -42,7 +36,7 @@ with col2:
 with col3:
     st.metric("Irregularities Fixed", "1,248") # Referencing your Phase 2 Audit Log
 
-# --- ROW 2: ANALYSIS ---
+# ROW 2: ANALYSIS
 st.divider()
 c1, c2 = st.columns(2)
 
@@ -60,17 +54,10 @@ with c2:
     fig2 = px.pie(demo, values='Sales_Qty', names='Store_Location', hole=0.4)
     st.plotly_chart(fig2, use_container_width=True)
 
-# --- ROW 3: ACTIONABLE RECOMMENDATIONS ---
+# ROW 3: ACTIONABLE RECOMMENDATIONS
 st.divider()
 st.header("💡 Strategic Recommendations")
 if "Black Friday" in selected_event:
     st.error("**Urgent Alert:** Black Friday turnover exceeds safety thresholds for 'Smart Watch Ultra'. Increase stock by 25%.")
 if "Mall of the Emirates" in selected_location:
     st.info("**Luxury Insight:** MoE customers show a 15% higher basket value. Prioritize 'Oud Silk Mood Perfume' inventory here.")
-
-
-# In[ ]:
-
-
-
-
