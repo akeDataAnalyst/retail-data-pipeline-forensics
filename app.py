@@ -56,7 +56,7 @@ with c2:
 
 # ROW 3: ACTIONABLE RECOMMENDATIONS
 st.divider()
-st.header("💡 Strategic Recommendations")
+st.header("Strategic Recommendations")
 if "Black Friday" in selected_event:
     st.error("**Urgent Alert:** Black Friday turnover exceeds safety thresholds for 'Smart Watch Ultra'. Increase stock by 25%.")
 if "Mall of the Emirates" in selected_location:
