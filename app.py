@@ -6,7 +6,7 @@ import plotly.express as px
 st.set_page_config(page_title="Dubai Retail Insights", layout="wide")
 
 # Title and Description (Matching the JD keywords)
-st.title("📊 Retail Stock & Buyer Behavior Analytics")
+st.title("Retail Stock & Buyer Behavior Analytics")
 st.markdown("""
 This dashboard identifies **stock irregularities**, **event-based performance**, 
 and **buyer demographics** to drive strategic decisions for the Dubai market.
